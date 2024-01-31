@@ -1,21 +1,19 @@
 package com.github.phillipkruger.user.model;
 
 import java.io.Serializable;
-import javax.json.bind.annotation.JsonbTransient;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OrderColumn;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OrderColumn;
 
 @Entity
 public class Address implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonbTransient
     private Integer id;
     
     @ElementCollection(fetch = FetchType.LAZY,targetClass=String.class) 
