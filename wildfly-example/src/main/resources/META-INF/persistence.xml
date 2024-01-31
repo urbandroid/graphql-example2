@@ -5,18 +5,12 @@
 	version="3.0">
 	<persistence-unit name="PersonDS"
 		transaction-type="JTA">
-		<jta-data-source>java:global/person/PersonDS</jta-data-source>
+		<jta-data-source>java:global/PersonDS</jta-data-source>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property
 				name="jakarta.persistence.schema-generation.database.action"
 				value="drop-and-create" />
-			<property
-				name="jakarta.persistence.schema-generation.create-source"
-				value="metadata" />
-			<property
-				name="jakarta.persistence.schema-generation.drop-source"
-				value="metadata" />
 			<property name="jakarta.persistence.sql-load-script-source"
 				value="load.sql" />
 			<property name="hibernate.dialect"

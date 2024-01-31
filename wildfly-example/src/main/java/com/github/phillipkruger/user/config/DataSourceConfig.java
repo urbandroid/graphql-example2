@@ -5,7 +5,7 @@ import jakarta.ejb.Singleton;
 
 @Singleton
 @DataSourceDefinition(
-    name = "java:global/person/PersonDS",
+    name = "java:global/PersonDS",
     className = "org.h2.jdbcx.JdbcDataSource",
     url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1",
     user = "sa",
